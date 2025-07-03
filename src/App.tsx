@@ -12,6 +12,7 @@ import {
 import { IonReactRouter } from "@ionic/react-router";
 import { home, people, person } from "ionicons/icons";
 import Tab1 from "./pages/Tab1";
+import CreateMatch from "./pages/CreateMatch";
 import Tab2 from "./pages/Tab2";
 import Tab3 from "./pages/Tab3";
 
@@ -63,6 +64,9 @@ const App: React.FC = () => (
           </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
+          </Route>
+          <Route exact path="/create-match">
+            <CreateMatch />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">

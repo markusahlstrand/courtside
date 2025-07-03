@@ -11,10 +11,7 @@ import {
   IonCol,
   IonIcon,
   IonButton,
-  IonChip,
-  IonLabel,
   IonButtons,
-  IonMenuButton,
 } from "@ionic/react";
 import {
   search,
@@ -26,7 +23,10 @@ import {
 } from "ionicons/icons";
 import "./Tab1.css";
 
+import { useHistory } from "react-router-dom";
+
 const Tab1: React.FC = () => {
+  const history = useHistory();
   return (
     <IonPage>
       <IonHeader>
@@ -66,14 +66,18 @@ const Tab1: React.FC = () => {
         <IonGrid>
           <IonRow>
             <IonCol size="6">
-              <IonCard className="action-card">
+              <IonCard
+                className="action-card"
+                button
+                onClick={() => history.push("/create-match")}
+              >
                 <div className="card-image book-court">
                   <div className="card-overlay">
                     <IonIcon icon={search} className="card-icon" />
                   </div>
                 </div>
                 <IonCardContent>
-                  <h3>Book a court</h3>
+                  <h3>Create a new match</h3>
                   <p>If you already know who you are playing with</p>
                 </IonCardContent>
               </IonCard>
