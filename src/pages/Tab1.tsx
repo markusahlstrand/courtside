@@ -1,8 +1,8 @@
-import { 
-  IonContent, 
-  IonHeader, 
-  IonPage, 
-  IonTitle, 
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
   IonToolbar,
   IonCard,
   IonCardContent,
@@ -14,17 +14,17 @@ import {
   IonChip,
   IonLabel,
   IonButtons,
-  IonMenuButton
-} from '@ionic/react';
-import { 
-  search, 
-  tennisball, 
-  school, 
-  trophy, 
+  IonMenuButton,
+} from "@ionic/react";
+import {
+  search,
+  tennisball,
+  school,
+  trophy,
   notifications,
-  chevronForward
-} from 'ionicons/icons';
-import './Tab1.css';
+  chevronForward,
+} from "ionicons/icons";
+import "./Tab1.css";
 
 const Tab1: React.FC = () => {
   return (
@@ -48,7 +48,10 @@ const Tab1: React.FC = () => {
               <div className="premium-icon">📱</div>
               <div className="premium-text">
                 <h3>GET ONE STEP AHEAD</h3>
-                <p>Get notified for available courts, grant your matches more visibility and discover your advanced statistics</p>
+                <p>
+                  Get notified for available courts, grant your matches more
+                  visibility and discover your advanced statistics
+                </p>
               </div>
               <IonIcon icon={chevronForward} className="premium-arrow" />
             </div>
