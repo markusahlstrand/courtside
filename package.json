@@ -19,13 +19,18 @@
     "@capacitor/status-bar": "7.0.1",
     "@ionic/react": "^8.5.0",
     "@ionic/react-router": "^8.5.0",
+    "@libsql/client-wasm": "^0.15.9",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
+    "ajv": "^8.17.1",
     "ionicons": "^7.4.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-router": "^5.3.4",
-    "react-router-dom": "^5.3.4"
+    "react-router-dom": "^5.3.4",
+    "rxdb": "^16.15.0",
+    "storage-indexeddb": "link:rxdb/plugins/storage-indexeddb",
+    "wasm": "link:@libsql/client/wasm"
   },
   "devDependencies": {
     "@capacitor/cli": "7.4.0",

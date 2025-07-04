@@ -18,6 +18,7 @@ import {
   IonCol,
   IonPopover,
 } from "@ionic/react";
+import { getDb } from "../db";
 
 const mockPlayers = [
   "Markus",
@@ -42,8 +43,18 @@ const CreateMatch: React.FC = () => {
   const [tempDate, setTempDate] = useState<string>("");
   const [tempTime, setTempTime] = useState<string>("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Insert match into RxDB
+    const db = await getDb();
+    await db.matches.insert({
+      id: Date.now().toString(), // Simple ID generation
+      date,
+      time,
+      location,
+      team1,
+      team2,
+    });
     setCreated(true);
   };
 
